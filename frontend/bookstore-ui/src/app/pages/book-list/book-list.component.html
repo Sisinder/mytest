@@ -1,0 +1,33 @@
+Wishlist:
+
+<mat-card *ngFor="let book of wishlist" class="example-card">
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>Book Name: {{book.name}}</mat-card-title>
+            <mat-card-subtitle>Price: {{book.price}}</mat-card-subtitle>
+            <!-- <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Image of a Shiba Inu"> -->
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        Author: {{book.author}} Description: {{book.description}}
+        <button mat-button color="warn" (click)="deleteFromWishlist(book)">Remove from Wishlist</button>
+    </mat-card-content>
+</mat-card>
+
+Book List:
+
+<mat-card *ngFor="let book of bookList" class="example-card">
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>Book Name: {{book.name}}</mat-card-title>
+            <mat-card-subtitle>Price: {{book.price}}</mat-card-subtitle>
+            <!-- <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Image of a Shiba Inu"> -->
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        Author: {{book.author}} Description: {{book.description}}
+
+        <button mat-button (click)="addToWishlist(book)">Add to Wishlist</button>
+
+    </mat-card-content>
+</mat-card>
